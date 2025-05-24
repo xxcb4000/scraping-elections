@@ -1,0 +1,698 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Election applatie+ (Connexions multiples)' inline='true' name='federated.1lndtxw1vdlb1y1fuv25m1mhk26g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Résultats_applatis_élections' name='excel-direct.13er5p104d4yvv1chn80o0rrs4uz'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/vincentbonhomme/Documents/Dev/Scraping élections interco et dhondt/scraping-elections/Résultats_applatis_élections.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Population_par_commune' name='excel-direct.14yn0rj1fqlf0h1cangsy0wlzt1j'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='/Users/vincentbonhomme/Documents/Dev/Scraping élections interco et dhondt/scraping-elections/Population_par_commune.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.13er5p104d4yvv1chn80o0rrs4uz' name='Election applatie' table='[&apos;Election applatie$&apos;]' type='table'>
+            <columns gridOrigin='A1:E9746:no:A1:E9746:0' header='yes' outcome='6'>
+              <column datatype='string' name='Commune' ordinal='0' />
+              <column datatype='string' name='Type' ordinal='1' />
+              <column datatype='integer' name='Année' ordinal='2' />
+              <column datatype='string' name='Parti' ordinal='3' />
+              <column datatype='real' name='Résultat' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.14yn0rj1fqlf0h1cangsy0wlzt1j' name='Population en 2024' table='[&apos;Population en 2024$&apos;]' type='table'>
+            <columns gridOrigin='A1:E646:no:A1:E646:3' lost='0' outcome='1' processed='2552'>
+              <column datatype='integer' name='Code INS' ordinal='0' />
+              <column datatype='string' name='Lieu de Résidence' ordinal='1' />
+              <column datatype='integer' name='Hommes' ordinal='2' />
+              <column datatype='integer' name='Femmes' ordinal='3' />
+              <column datatype='integer' name='Total' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E9746:no:A1:E9746:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E646:no:A1:E646:3&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>2552</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Commune</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Commune]</local-name>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias>Commune</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RBE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RBE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Année</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Année]</local-name>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias>Année</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parti</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Parti]</local-name>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias>Parti</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RBE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Résultat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Résultat]</local-name>
+            <parent-name>[Election applatie]</parent-name>
+            <remote-alias>Résultat</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code INS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Code INS]</local-name>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias>Code INS</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lieu de Résidence</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Lieu de Résidence]</local-name>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias>Lieu de Résidence</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RBE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hommes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Hommes]</local-name>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias>Hommes</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Femmes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Femmes]</local-name>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias>Femmes</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[Population en 2024]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Année]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Code INS]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Commune]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Parti]' role='dimension' type='nominal' />
+      <column caption='Election applatie' datatype='table' name='[__tableau_internal_object_id__].[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]' role='measure' type='quantitative' />
+      <column caption='Population en 2024' datatype='table' name='[__tableau_internal_object_id__].[Population en 2024_758121B2DFD94FE6B23A556ADC576213]' role='measure' type='quantitative' />
+      <column-instance column='[Parti]' derivation='Attribute' name='[attr:Parti:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Parti]' derivation='None' name='[none:Parti:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='fr_FR' class='hyper' dbname='/var/folders/7h/26ds7dnn0w5b8dv3mmfv9wcr0000gn/T/tableau-temp/#TableauTemp_1ts1cmh0xqrskt0zkfp731ahmqun.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/09/2025 07:23:15 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Election applatie_C5AA62A7B7184455A297B6B99DF50E7A' table='[Extract].[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]' type='table' />
+            <relation name='Population en 2024_758121B2DFD94FE6B23A556ADC576213' table='[Extract].[Population en 2024_758121B2DFD94FE6B23A556ADC576213]' type='table' />
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Commune</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Commune]</local-name>
+              <parent-name>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</parent-name>
+              <remote-alias>Commune</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Election applatie</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>301</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RBE_S2' />
+              <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type]</local-name>
+              <parent-name>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</parent-name>
+              <remote-alias>Type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Election applatie</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RBE_S2' />
+              <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Année</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Année]</local-name>
+              <parent-name>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</parent-name>
+              <remote-alias>Année</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Election applatie</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Parti</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Parti]</local-name>
+              <parent-name>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</parent-name>
+              <remote-alias>Parti</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Election applatie</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RBE_S2' />
+              <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Résultat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Résultat]</local-name>
+              <parent-name>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</parent-name>
+              <remote-alias>Résultat</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Election applatie</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2060</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Code INS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Code INS]</local-name>
+              <parent-name>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</parent-name>
+              <remote-alias>Code INS</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Population en 2024</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>638</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lieu de Résidence</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lieu de Résidence]</local-name>
+              <parent-name>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</parent-name>
+              <remote-alias>Lieu de Résidence</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Population en 2024</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>638</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RBE_S2' />
+              <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hommes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Hommes]</local-name>
+              <parent-name>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</parent-name>
+              <remote-alias>Hommes</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Population en 2024</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>619</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Femmes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Femmes]</local-name>
+              <parent-name>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</parent-name>
+              <remote-alias>Femmes</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Population en 2024</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>627</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total]</local-name>
+              <parent-name>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</parent-name>
+              <remote-alias>Total</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Population en 2024</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>633</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Population en 2024_758121B2DFD94FE6B23A556ADC576213]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Parti:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;LISTES DESTEXHE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BLANCO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MR&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DéFI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PARTI POPULAIRE&quot;</bucket>
+            </map>
+            <map to='#7ec1ca'>
+              <bucket>&quot;LES ENGAGÉS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ECOLO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LA DROITE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;N-VA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PS&quot;</bucket>
+            </map>
+            <map to='#e6b9d9'>
+              <bucket>&quot;PTB&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CDH&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CHEZ NOUS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;VLAAMS BELANG&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NATION&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Collectif Citoyen&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Parti:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;LISTES DESTEXHE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BLANCO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MR&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DéFI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PARTI POPULAIRE&quot;</bucket>
+            </map>
+            <map to='#7ec1ca'>
+              <bucket>&quot;LES ENGAGÉS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ECOLO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LA DROITE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;N-VA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PS&quot;</bucket>
+            </map>
+            <map to='#e6b9d9'>
+              <bucket>&quot;PTB&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CDH&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CHEZ NOUS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;VLAAMS BELANG&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NATION&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Collectif Citoyen&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Belgique&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Election applatie' id='Election applatie_C5AA62A7B7184455A297B6B99DF50E7A'>
+            <properties context=''>
+              <relation connection='excel-direct.13er5p104d4yvv1chn80o0rrs4uz' name='Election applatie' table='[&apos;Election applatie$&apos;]' type='table'>
+                <columns gridOrigin='A1:E9746:no:A1:E9746:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Commune' ordinal='0' />
+                  <column datatype='string' name='Type' ordinal='1' />
+                  <column datatype='integer' name='Année' ordinal='2' />
+                  <column datatype='string' name='Parti' ordinal='3' />
+                  <column datatype='real' name='Résultat' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Election applatie_C5AA62A7B7184455A297B6B99DF50E7A' table='[Extract].[Election applatie_C5AA62A7B7184455A297B6B99DF50E7A]' type='table' />
+            </properties>
+          </object>
+          <object caption='Population en 2024' id='Population en 2024_758121B2DFD94FE6B23A556ADC576213'>
+            <properties context=''>
+              <relation connection='excel-direct.14yn0rj1fqlf0h1cangsy0wlzt1j' name='Population en 2024' table='[&apos;Population en 2024$&apos;]' type='table'>
+                <columns gridOrigin='A1:E646:no:A1:E646:3' lost='0' outcome='1' processed='2552'>
+                  <column datatype='integer' name='Code INS' ordinal='0' />
+                  <column datatype='string' name='Lieu de Résidence' ordinal='1' />
+                  <column datatype='integer' name='Hommes' ordinal='2' />
+                  <column datatype='integer' name='Femmes' ordinal='3' />
+                  <column datatype='integer' name='Total' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Population en 2024_758121B2DFD94FE6B23A556ADC576213' table='[Extract].[Population en 2024_758121B2DFD94FE6B23A556ADC576213]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Commune]' />
+              <expression op='[Lieu de Résidence]' />
+            </expression>
+            <first-end-point object-id='Election applatie_C5AA62A7B7184455A297B6B99DF50E7A' />
+            <second-end-point object-id='Population en 2024_758121B2DFD94FE6B23A556ADC576213' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Feuille 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Election applatie+ (Connexions multiples)' name='federated.1lndtxw1vdlb1y1fuv25m1mhk26g' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1lndtxw1vdlb1y1fuv25m1mhk26g'>
+            <column datatype='integer' name='[Année]' role='dimension' type='quantitative' />
+            <column datatype='string' name='[Commune]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='string' name='[Parti]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Résultat]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Année]' derivation='None' name='[none:Année:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Commune]' derivation='None' name='[none:Commune:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Parti]' derivation='None' name='[none:Parti:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Résultat]' derivation='None' name='[none:Résultat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Année:qk]' included-values='in-range'>
+            <min>2024</min>
+            <max>2024</max>
+          </filter>
+          <filter class='categorical' column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Parti:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;CDH&quot;' />
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;ECOLO&quot;' />
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;LES ENGAGÉS&quot;' />
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;MR&quot;' />
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;PS&quot;' />
+              <groupfilter function='member' level='[none:Parti:nk]' member='&quot;PTB&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Type:nk]'>
+            <groupfilter function='member' level='[none:Type:nk]' member='&quot;PW&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Parti:nk]</column>
+            <column>[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Année:qk]</column>
+            <column>[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[Longitude (generated)]' field-type='quantitative' max='690202.69715131028' min='522992.84402700188' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[Latitude (generated)]' field-type='quantitative' max='6611956.2721705372' min='6477273.564120763' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Parti:nk]' />
+              <size column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[sum:Total:qk]' />
+              <wedge-size column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Résultat:qk]' />
+              <text column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Commune:nk]' />
+              <lod column='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Commune:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Commune:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Commune:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Parti:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Parti:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Résultat:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Résultat:qk]> %]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Total:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[sum:Total:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.7900552749633789' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[Latitude (generated)]</rows>
+        <cols>[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{D4C57553-A505-4E0E-B130-2A7C127E202C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Feuille 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card param='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Type:nk]' type='filter' />
+            <card param='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Année:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1lndtxw1vdlb1y1fuv25m1mhk26g].[none:Parti:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{FF669850-CE56-40CD-A616-4638A9B0E5FD}' />
+    </window>
+  </windows>
+</workbook>
